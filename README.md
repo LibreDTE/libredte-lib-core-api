@@ -40,6 +40,21 @@ docker run -d --name libredte-lib-core-api --rm -p 9090:80 -e APP_URL=http://loc
   ghcr.io/libredte/libredte-lib-core-api:latest
 ```
 
+Los ejemplos anteriores usan `--rm`: cómodo para probar, pero **no** vuelve a
+levantarse solo si reinicias el host (`--restart` y `--rm` son mutuamente
+excluyentes en Docker). Para un servicio persistente que sobreviva reinicios,
+saca `--rm` y usa `--restart unless-stopped`:
+
+```bash
+docker run -d --name libredte-lib-core-api --restart unless-stopped \
+  -p 8080:80 -e APP_URL=http://localhost:8080 \
+  ghcr.io/libredte/libredte-lib-core-api:latest
+```
+
+Esto asume que el propio Docker arranca al iniciar el host: en Docker
+Desktop necesitas tener activado "iniciar Docker Desktop al iniciar sesión";
+en Linux con systemd, `dockerd` normalmente ya arranca solo.
+
 ### `docker compose`
 
 ```bash

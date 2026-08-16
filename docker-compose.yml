@@ -1,7 +1,8 @@
 services:
-  api:
+  libredte-lib-core-api:
     build: .
     image: ghcr.io/libredte/libredte-lib-core-api:latest
+    restart: unless-stopped
     environment:
       APP_URL: ${APP_URL:-http://localhost:8080}
     ports:
