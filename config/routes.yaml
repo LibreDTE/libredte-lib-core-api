@@ -1,0 +1,11 @@
+docs:
+  path: /
+  handler: 'redirect:/docs.html'
+
+api_index:
+  path: /api
+  handler: 'redirect:/api/index'
+
+api_resource:
+  path: /api/{resource:.+}
+  handler: 'App\Controller\ApiController::dispatch'

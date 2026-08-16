@@ -1,0 +1,26 @@
+{
+    "name": "libredte/libredte-lib-core-api",
+    "description": "LibreDTE: Core - El núcleo de LibreDTE Edición Comunidad en una API",
+    "type": "project",
+    "homepage": "https://www.libredte.cl",
+    "license": "AGPL-3.0+",
+    "authors": [
+        {
+            "name": "LibreDTE",
+            "homepage": "https://www.libredte.cl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.5",
+        "derafu/http": "dev-main",
+        "derafu/backbone-api": "dev-main",
+        "libredte/libredte-lib-core-dispatcher": "dev-main"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

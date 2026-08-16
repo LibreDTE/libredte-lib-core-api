@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>LibreDTE: Core - El núcleo de LibreDTE Edición Comunidad en una API</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
+  </head>
+  <body>
+    <div id="header" style="text-align: center">
+      <img src="/img/libredte-logo.png" alt="LibreDTE">
+    </div>
+    <div id="swagger-ui"></div>
+    <div id="footer" style="text-align: center; border-top: 1px solid #ccc; padding-top: 10px; margin-top: 10px;">
+        &copy; 2026 LibreDTE
+        - <a href="https://www.libredte.cl" target="_blank">www.libredte.cl</a>
+        - <em>Facturación electrónica libre para Chile</em>
+    </div>
+    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+    <script>
+      SwaggerUIBundle({
+        url: '/api/openapi-docs.json',
+        dom_id: '#swagger-ui',
+      });
+    </script>
+  </body>
+</html>

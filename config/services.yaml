@@ -1,0 +1,71 @@
+imports:
+  - { resource: '../vendor/libredte/libredte-lib-core-dispatcher/config/services.yaml' }
+
+parameters:
+    libredte.lib.core.project_dir: '%kernel.project_dir%/vendor/libredte/libredte-lib-core'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\Controller\:
+        resource: '../src/Controller/'
+        public: true
+
+    Psr\Http\Server\RequestHandlerInterface:
+        class: Derafu\Http\Service\RequestHandler
+        public: true
+        arguments:
+            $middlewares:
+                - '@Derafu\Http\Middleware\StaticFilesMiddleware'
+                - '@Derafu\Http\Middleware\RequestFactoryMiddleware'
+                - '@Derafu\Http\Middleware\RouterMiddleware'
+                - '@Derafu\Http\Middleware\DispatcherMiddleware'
+                - '@Derafu\Http\Middleware\ResponseNormalizerMiddleware'
+
+    Derafu\Http\Middleware\StaticFilesMiddleware:
+        arguments:
+            $directory: '%kernel.project_dir%/public/static'
+    Derafu\Http\Middleware\RequestFactoryMiddleware: ~
+    Derafu\Http\Middleware\RouterMiddleware: ~
+    Derafu\Http\Middleware\DispatcherMiddleware: ~
+    Derafu\Http\Middleware\ResponseNormalizerMiddleware: ~
+
+    Derafu\Http\Contract\RequestFactoryInterface:
+        class: Derafu\Http\Factory\RequestFactory
+
+    Derafu\Routing\Contract\RouterInterface:
+        class: Derafu\Routing\Router
+        arguments:
+            $parsers:
+                - '@Derafu\Routing\Parser\StaticParser'
+                - '@Derafu\Routing\Parser\DynamicParser'
+            $routes: '%routes%'
+
+    Derafu\Routing\Parser\StaticParser: ~
+    Derafu\Routing\Parser\DynamicParser: ~
+
+    Derafu\Http\Contract\DispatcherInterface:
+        class: Derafu\Http\Service\Dispatcher
+
+    Derafu\Http\Contract\ProblemHandlerInterface:
+        class: Derafu\Http\Service\ProblemHandler
+        lazy: true
+
+    Derafu\Http\Contract\ProblemFactoryInterface:
+        class: Derafu\Http\Factory\ProblemFactory
+        lazy: true
+
+    Derafu\Http\Contract\SafeThrowableFactoryInterface:
+        class: Derafu\Http\Factory\SafeThrowableFactory
+        lazy: true
+
+    # Backbone API (HTTP transport with autodiscovery).
+    Derafu\BackboneApi\Contract\DispatcherInterface:
+        class: Derafu\BackboneApi\Service\Dispatcher
+    Derafu\BackboneApi\Contract\RouterInterface:
+        class: Derafu\BackboneApi\Service\Router
+    Derafu\BackboneApi\Service\Explorer: ~
+    Derafu\BackboneApi\Service\Documenter: ~
