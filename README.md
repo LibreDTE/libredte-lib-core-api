@@ -19,14 +19,24 @@ funciona — solo los enlaces que devuelve quedarán con la URL por defecto.
 ### `docker run`, con la imagen ya publicada
 
 ```bash
-docker run --rm -p 8080:80 -e APP_URL=http://localhost:8080 \
+docker run -d --name libredte-lib-core-api --rm -p 8080:80 -e APP_URL=http://localhost:8080 \
   ghcr.io/libredte/libredte-lib-core-api:latest
+```
+
+`-d` lo deja corriendo en segundo plano (sin `-d` se queda en primer plano y
+`Ctrl+C` lo detiene). `--rm` hace que el contenedor se borre solo cuando lo
+detengas, en vez de quedar acumulado como "Exited". Para ver los logs o
+detenerlo:
+
+```bash
+docker logs -f libredte-lib-core-api
+docker stop libredte-lib-core-api
 ```
 
 Para usar otro puerto externo (ej. 9090), cambia ambos valores:
 
 ```bash
-docker run --rm -p 9090:80 -e APP_URL=http://localhost:9090 \
+docker run -d --name libredte-lib-core-api --rm -p 9090:80 -e APP_URL=http://localhost:9090 \
   ghcr.io/libredte/libredte-lib-core-api:latest
 ```
 
@@ -35,8 +45,12 @@ docker run --rm -p 9090:80 -e APP_URL=http://localhost:9090 \
 ```bash
 git clone git@github.com:LibreDTE/libredte-lib-core-api.git
 cd libredte-lib-core-api
-docker compose up
+docker compose up -d
 ```
+
+(sin `-d` también queda en primer plano; con `-d` corre en segundo plano y
+`docker compose logs -f` / `docker compose down` sirven para verlo o
+detenerlo).
 
 `docker-compose.yml` expone dos variables de entorno independientes, cada
 una con su propio default (`8080` para ambas, pero no están ligadas entre
@@ -49,7 +63,7 @@ sí):
 Para usar otro puerto:
 
 ```bash
-PORT=9090 APP_URL=http://localhost:9090 docker compose up
+PORT=9090 APP_URL=http://localhost:9090 docker compose up -d
 ```
 
 ### Construir la imagen localmente
