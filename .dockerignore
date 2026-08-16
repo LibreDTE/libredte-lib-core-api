@@ -1,0 +1,8 @@
+.git
+.github
+.env
+var/
+vendor/
+docker-compose.yml
+Dockerfile
+.dockerignore

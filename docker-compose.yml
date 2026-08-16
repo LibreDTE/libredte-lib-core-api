@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    image: ghcr.io/libredte/libredte-lib-core-api:latest
+    environment:
+      APP_URL: ${APP_URL:-http://localhost:8080}
+    ports:
+      - "${PORT:-8080}:80"
