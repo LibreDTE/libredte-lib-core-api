@@ -7,7 +7,6 @@ on:
       - main
     paths:
       - 'Dockerfile'
-      - 'entrypoint.sh'
       - 'composer.json'
       - 'composer.lock'
       - 'app/**'
@@ -15,9 +14,6 @@ on:
       - 'public/**'
       - 'src/**'
       - '.github/workflows/publish-image.yml'
-
-env:
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
 
 jobs:
   build:
@@ -31,6 +27,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Set image name (lowercase)
+        run: echo "IMAGE_NAME=ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_ENV"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
