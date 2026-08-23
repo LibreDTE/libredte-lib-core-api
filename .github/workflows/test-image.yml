@@ -1,0 +1,60 @@
+name: Test Image
+
+on:
+  workflow_call:
+
+jobs:
+  test:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image (single-platform, loaded locally)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          load: true
+          tags: libredte-lib-core-api:ci-test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Verify a real operation dispatches end to end
+        run: |
+          set -e
+
+          docker run -d --name ci-test -p 18080:80 libredte-lib-core-api:ci-test
+
+          # Espera a que FrankenPHP/Caddy respondan, no a que el contenedor
+          # esté "Up" (eso solo dice que el proceso arrancó, no que ya sirve).
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:18080/api/index >/dev/null && break
+            sleep 1
+          done
+
+          # Despacha una operación de negocio real (billing.identifier.caf_faker::create),
+          # sin mocks: ejercita routing, compilación del contenedor de DI,
+          # deserialización de Emisor desde array, y generación real de un
+          # CAF (par de llaves RSA real incluido). El id es determinístico
+          # para estos parámetros (tipoDocumento=33, folioDesde=1, folioHasta=100),
+          # así que no es un valor arbitrario a "adivinar".
+          response=$(curl -sf -X POST http://localhost:18080/api/billing/identifier/caf_faker/create \
+            -H "Content-Type: application/json" \
+            -d '{"parameters": {"emisor": {"rut": "76192083-9", "razon_social": "SASCO SpA"}, "codigoDocumento": 33, "folioDesde": 1, "folioHasta": 100}}')
+
+          echo "$response"
+
+          echo "$response" | grep -q '"id":"CAF33D1H100"' || {
+            echo "::error::El dispatch real de billing.identifier.caf_faker::create no devolvió el CAF esperado."
+            docker logs ci-test
+            exit 1
+          }
+
+          docker rm -f ci-test

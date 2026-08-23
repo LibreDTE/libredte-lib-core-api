@@ -14,10 +14,16 @@ on:
       - 'public/**'
       - 'src/**'
       - '.github/workflows/publish-image.yml'
+      - '.github/workflows/test-image.yml'
 
 jobs:
-  build:
+  test:
+    name: Test
+    uses: ./.github/workflows/test-image.yml
+
+  publish:
     name: Build and publish
+    needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
