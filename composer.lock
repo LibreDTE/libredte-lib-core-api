@@ -134,16 +134,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/backbone-api.git",
-                "reference": "3187109318c27a0c0d685db3fb34b840499b3449"
+                "reference": "b627d71214c17fd32ed75e084281b4acfa30c443"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/backbone-api/zipball/3187109318c27a0c0d685db3fb34b840499b3449",
-                "reference": "3187109318c27a0c0d685db3fb34b840499b3449",
+                "url": "https://api.github.com/repos/derafu/backbone-api/zipball/b627d71214c17fd32ed75e084281b4acfa30c443",
+                "reference": "b627d71214c17fd32ed75e084281b4acfa30c443",
                 "shasum": ""
             },
             "require": {
-                "derafu/backbone": "dev-main",
                 "derafu/backbone-dispatcher": "dev-main",
                 "derafu/translation": "dev-main",
                 "php": "^8.5",
@@ -154,7 +153,7 @@
                 "friendsofphp/php-cs-fixer": "^3.95",
                 "nyholm/psr7": "^1.8",
                 "phpstan/phpstan": "^2.2",
-                "phpunit/phpunit": "^13.2"
+                "phpunit/phpunit": "^13.3"
             },
             "default-branch": true,
             "type": "library",
@@ -179,7 +178,7 @@
                 "issues": "https://github.com/derafu/backbone-api/issues",
                 "source": "https://github.com/derafu/backbone-api"
             },
-            "time": "2026-08-23T20:00:33+00:00"
+            "time": "2026-08-23T21:57:59+00:00"
         },
         {
             "name": "derafu/backbone-dispatcher",
@@ -187,12 +186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/backbone-dispatcher.git",
-                "reference": "ab1088605a14eb898be3b4d09911f55ff4bb540d"
+                "reference": "50f774c24d901ae06b478f13e2c2f489987767e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/ab1088605a14eb898be3b4d09911f55ff4bb540d",
-                "reference": "ab1088605a14eb898be3b4d09911f55ff4bb540d",
+                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/50f774c24d901ae06b478f13e2c2f489987767e0",
+                "reference": "50f774c24d901ae06b478f13e2c2f489987767e0",
                 "shasum": ""
             },
             "require": {
@@ -231,7 +230,7 @@
                 "issues": "https://github.com/derafu/backbone-dispatcher/issues",
                 "source": "https://github.com/derafu/backbone-dispatcher"
             },
-            "time": "2026-08-23T16:47:30+00:00"
+            "time": "2026-08-23T21:54:57+00:00"
         },
         {
             "name": "derafu/cache",
