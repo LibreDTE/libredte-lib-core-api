@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea908b7efa1b9ef71a9c668035e82863",
+    "content-hash": "68ac4e27ecfcc7c7b9ace7bc74f40977",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -134,18 +134,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/backbone-api.git",
-                "reference": "b627d71214c17fd32ed75e084281b4acfa30c443"
+                "reference": "0245082c6851ff573f8ca5cd8d666f0bbc6c8b85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/backbone-api/zipball/b627d71214c17fd32ed75e084281b4acfa30c443",
-                "reference": "b627d71214c17fd32ed75e084281b4acfa30c443",
+                "url": "https://api.github.com/repos/derafu/backbone-api/zipball/0245082c6851ff573f8ca5cd8d666f0bbc6c8b85",
+                "reference": "0245082c6851ff573f8ca5cd8d666f0bbc6c8b85",
                 "shasum": ""
             },
             "require": {
                 "derafu/backbone-dispatcher": "dev-main",
                 "derafu/translation": "dev-main",
                 "php": "^8.5",
+                "psr/http-factory": "^1.1",
                 "psr/http-message": "^2.0"
             },
             "require-dev": {
@@ -178,7 +179,7 @@
                 "issues": "https://github.com/derafu/backbone-api/issues",
                 "source": "https://github.com/derafu/backbone-api"
             },
-            "time": "2026-08-23T21:57:59+00:00"
+            "time": "2026-08-24T19:31:30+00:00"
         },
         {
             "name": "derafu/backbone-dispatcher",
@@ -186,12 +187,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/backbone-dispatcher.git",
-                "reference": "50f774c24d901ae06b478f13e2c2f489987767e0"
+                "reference": "239ed715a5fcbf06d329c08db8257ed857f4f835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/50f774c24d901ae06b478f13e2c2f489987767e0",
-                "reference": "50f774c24d901ae06b478f13e2c2f489987767e0",
+                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/239ed715a5fcbf06d329c08db8257ed857f4f835",
+                "reference": "239ed715a5fcbf06d329c08db8257ed857f4f835",
                 "shasum": ""
             },
             "require": {
@@ -230,7 +231,7 @@
                 "issues": "https://github.com/derafu/backbone-dispatcher/issues",
                 "source": "https://github.com/derafu/backbone-dispatcher"
             },
-            "time": "2026-08-23T21:54:57+00:00"
+            "time": "2026-08-24T18:52:51+00:00"
         },
         {
             "name": "derafu/cache",
@@ -1737,12 +1738,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreDTE/libredte-lib-core-dispatcher.git",
-                "reference": "f1f275ff36fb5ffdc4847d4e960e781f616512b0"
+                "reference": "f2e625d9257a8baf68bd40849e7290a0b50122d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core-dispatcher/zipball/f1f275ff36fb5ffdc4847d4e960e781f616512b0",
-                "reference": "f1f275ff36fb5ffdc4847d4e960e781f616512b0",
+                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core-dispatcher/zipball/f2e625d9257a8baf68bd40849e7290a0b50122d5",
+                "reference": "f2e625d9257a8baf68bd40849e7290a0b50122d5",
                 "shasum": ""
             },
             "require": {
@@ -1787,7 +1788,7 @@
                 "issues": "https://github.com/LibreDTE/libredte-lib-core-dispatcher/issues",
                 "source": "https://github.com/LibreDTE/libredte-lib-core-dispatcher/tree/main"
             },
-            "time": "2026-08-23T20:14:52+00:00"
+            "time": "2026-08-24T04:01:54+00:00"
         },
         {
             "name": "mezzio/mezzio-authentication",
@@ -4651,16 +4652,16 @@
         },
         {
             "name": "symfony/polyfill-deepclone",
-            "version": "v1.40.0",
+            "version": "v1.42.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-deepclone.git",
-                "reference": "dca4ccba5f360070b574414dce4c1e7a559844fa"
+                "reference": "70ba0627efc68e97ea392843458a2dd9d6dbd156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-deepclone/zipball/dca4ccba5f360070b574414dce4c1e7a559844fa",
-                "reference": "dca4ccba5f360070b574414dce4c1e7a559844fa",
+                "url": "https://api.github.com/repos/symfony/polyfill-deepclone/zipball/70ba0627efc68e97ea392843458a2dd9d6dbd156",
+                "reference": "70ba0627efc68e97ea392843458a2dd9d6dbd156",
                 "shasum": ""
             },
             "require": {
@@ -4714,7 +4715,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-deepclone/tree/v1.40.0"
+                "source": "https://github.com/symfony/polyfill-deepclone/tree/v1.42.0"
             },
             "funding": [
                 {
@@ -4734,7 +4735,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-12T07:27:17+00:00"
+            "time": "2026-08-07T06:33:24+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -4820,16 +4821,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.38.1",
+            "version": "v1.42.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "dc21118016c039a66235cf93d96b435ffb282412"
+                "reference": "51b5ff5ba85452b31ec6f55490b08148612339d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/dc21118016c039a66235cf93d96b435ffb282412",
-                "reference": "dc21118016c039a66235cf93d96b435ffb282412",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/51b5ff5ba85452b31ec6f55490b08148612339d9",
+                "reference": "51b5ff5ba85452b31ec6f55490b08148612339d9",
                 "shasum": ""
             },
             "require": {
@@ -4883,7 +4884,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.42.0"
             },
             "funding": [
                 {
@@ -4903,20 +4904,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-25T15:22:23+00:00"
+            "time": "2026-08-24T10:51:20+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.38.0",
+            "version": "v1.42.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "2d446c214bdbe5b71bde5011b060a05fece3ae6b"
+                "reference": "aa20edea75bd9c48cfecc8360922e5a6e5c44502"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/2d446c214bdbe5b71bde5011b060a05fece3ae6b",
-                "reference": "2d446c214bdbe5b71bde5011b060a05fece3ae6b",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/aa20edea75bd9c48cfecc8360922e5a6e5c44502",
+                "reference": "aa20edea75bd9c48cfecc8360922e5a6e5c44502",
                 "shasum": ""
             },
             "require": {
@@ -4968,7 +4969,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.38.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.42.0"
             },
             "funding": [
                 {
@@ -4988,7 +4989,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-25T13:48:31+00:00"
+            "time": "2026-08-07T06:33:24+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -6006,26 +6007,27 @@
         },
         {
             "name": "tecnickcom/tc-lib-barcode",
-            "version": "2.13.3",
+            "version": "2.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-barcode.git",
-                "reference": "8994a6b7a50a2767791d69e4b76f9c3f9f2064e7"
+                "reference": "3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/8994a6b7a50a2767791d69e4b76f9c3f9f2064e7",
-                "reference": "8994a6b7a50a2767791d69e4b76f9c3f9f2064e7",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b",
+                "reference": "3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "ext-gd": "*",
                 "ext-pcre": "*",
-                "php": ">=8.2",
+                "php": "^8.2",
                 "tecnickcom/tc-lib-color": "^2.13"
             },
             "require-dev": {
+                "carthage-software/mago": "^1.47",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6103,27 +6105,28 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-14T21:51:15+00:00"
+            "time": "2026-08-24T13:21:34+00:00"
         },
         {
             "name": "tecnickcom/tc-lib-color",
-            "version": "2.13.4",
+            "version": "2.13.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-color.git",
-                "reference": "96d5a04c09442614a3ee3baa30f3f22635923000"
+                "reference": "389eaad39e91520b3b2aeb40fad7f8c6e1d80fed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/96d5a04c09442614a3ee3baa30f3f22635923000",
-                "reference": "96d5a04c09442614a3ee3baa30f3f22635923000",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/389eaad39e91520b3b2aeb40fad7f8c6e1d80fed",
+                "reference": "389eaad39e91520b3b2aeb40fad7f8c6e1d80fed",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "php": ">=8.2"
+                "php": "^8.2"
             },
             "require-dev": {
+                "carthage-software/mago": "^1.47",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6170,7 +6173,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-14T21:49:20+00:00"
+            "time": "2026-08-24T12:53:27+00:00"
         },
         {
             "name": "twig/twig",

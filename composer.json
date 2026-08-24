@@ -19,7 +19,8 @@
         "php": "^8.5",
         "derafu/http": "dev-main",
         "derafu/backbone-api": "dev-main",
-        "libredte/libredte-lib-core-dispatcher": "dev-main"
+        "libredte/libredte-lib-core-dispatcher": "dev-main",
+        "nyholm/psr7": "^1.8"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

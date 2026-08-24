@@ -69,3 +69,12 @@ services:
         class: Derafu\BackboneApi\Service\Router
     Derafu\BackboneApi\Service\Explorer: ~
     Derafu\BackboneApi\Service\Documenter: ~
+    Derafu\BackboneApi\Service\HttpStatusResolver: ~
+
+    # AbstractController (App\Controller\ApiController) needs a real PSR-17
+    # response factory to answer a failed operation with the resolved HTTP
+    # status instead of the default 200 — nyholm/psr7 is already pulled in
+    # transitively (derafu/http's own tests use it), reused here as the
+    # real runtime implementation too.
+    Psr\Http\Message\ResponseFactoryInterface:
+        class: Nyholm\Psr7\Factory\Psr17Factory
