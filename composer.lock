@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68ac4e27ecfcc7c7b9ace7bc74f40977",
+    "content-hash": "3e0ee8c86347d8a71176b17e8a0dd03c",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -2127,16 +2127,10 @@
         {
             "name": "libredte/libredte-lib-core",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LibreDTE/libredte-lib-core.git",
-                "reference": "f38d5cdd767740a71f976774ca00ee5f1b89a5fb"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/f38d5cdd767740a71f976774ca00ee5f1b89a5fb",
-                "reference": "f38d5cdd767740a71f976774ca00ee5f1b89a5fb",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/delaf/dev/libredte-lib-core",
+                "reference": "45458b3c94b373fc8185866534ed39e5e284ce69"
             },
             "require": {
                 "derafu/backbone": "dev-main",
@@ -2178,14 +2172,46 @@
             "suggest": {
                 "webklex/php-imap": "Requerido en tiempo de ejecución para recibir documentos por correo con billing.exchange.receiver::receive (estrategia email.imap)."
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "libredte\\lib\\Core\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "libredte\\lib\\Tests\\": "tests/src/"
+                }
+            },
+            "scripts": {
+                "docs": [
+                    "php tools/phpdocumentor run --config=phpdoc.xml"
+                ],
+                "tests": [
+                    "XDEBUG_MODE=coverage vendor/bin/phpunit --configuration=phpunit.xml"
+                ],
+                "tests-unit": [
+                    "XDEBUG_MODE=coverage vendor/bin/phpunit --configuration=phpunit.xml --testsuite unit"
+                ],
+                "tests-functional": [
+                    "XDEBUG_MODE=coverage vendor/bin/phpunit --configuration=phpunit.xml --testsuite functional"
+                ],
+                "tests-integration": [
+                    "XDEBUG_MODE=coverage vendor/bin/phpunit --configuration=phpunit.xml --testsuite integration"
+                ],
+                "phpcs-fix": [
+                    "vendor/bin/php-cs-fixer fix -v --config=php-cs-fixer.php"
+                ],
+                "phpcs": [
+                    "vendor/bin/php-cs-fixer fix -v --dry-run --diff --config=php-cs-fixer.php"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1G"
+                ],
+                "phpstan-export": [
+                    "vendor/bin/phpstan analyse --configuration=phpstan.neon --level 9 --generate-baseline"
+                ]
+            },
             "license": [
                 "AGPL-3.0+"
             ],
@@ -2207,7 +2233,9 @@
                 "issues": "https://github.com/libredte/libredte-lib-core/issues",
                 "source": "https://github.com/libredte/libredte-lib-core"
             },
-            "time": "2026-08-27T00:20:18+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "libredte/libredte-lib-core-dispatcher",
@@ -2215,12 +2243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreDTE/libredte-lib-core-dispatcher.git",
-                "reference": "d8412c8b3c86ee43883820402998cd44f21aee28"
+                "reference": "795c0bb62cde3d5a5d958ee85a8381b6a2a4ee69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core-dispatcher/zipball/d8412c8b3c86ee43883820402998cd44f21aee28",
-                "reference": "d8412c8b3c86ee43883820402998cd44f21aee28",
+                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core-dispatcher/zipball/795c0bb62cde3d5a5d958ee85a8381b6a2a4ee69",
+                "reference": "795c0bb62cde3d5a5d958ee85a8381b6a2a4ee69",
                 "shasum": ""
             },
             "require": {
@@ -2231,11 +2259,13 @@
                 "webklex/php-imap": "^6.2"
             },
             "require-dev": {
+                "derafu/selector": "dev-main",
                 "ext-xdebug": "*",
                 "friendsofphp/php-cs-fixer": "^3.95",
+                "mtdowling/jmespath.php": "^2.8",
                 "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^13.2",
-                "symfony/yaml": "^7.4 || ^8.0"
+                "symfony/yaml": "^8.0"
             },
             "default-branch": true,
             "type": "library",
@@ -2267,7 +2297,7 @@
                 "issues": "https://github.com/LibreDTE/libredte-lib-core-dispatcher/issues",
                 "source": "https://github.com/LibreDTE/libredte-lib-core-dispatcher/tree/main"
             },
-            "time": "2026-08-27T01:11:30+00:00"
+            "time": "2026-08-27T15:36:06+00:00"
         },
         {
             "name": "mezzio/mezzio-authentication",
@@ -6727,16 +6757,16 @@
         },
         {
             "name": "tecnickcom/tc-lib-barcode",
-            "version": "2.13.4",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-barcode.git",
-                "reference": "3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b"
+                "reference": "4360438c37084f2ba03a4d67284004e11c6708a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b",
-                "reference": "3e6fa83d0a0dcbaaffec3000a07f46ca74179d9b",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/4360438c37084f2ba03a4d67284004e11c6708a0",
+                "reference": "4360438c37084f2ba03a4d67284004e11c6708a0",
                 "shasum": ""
             },
             "require": {
@@ -6744,10 +6774,10 @@
                 "ext-gd": "*",
                 "ext-pcre": "*",
                 "php": "^8.2",
-                "tecnickcom/tc-lib-color": "^2.13"
+                "tecnickcom/tc-lib-color": "^3.0"
             },
             "require-dev": {
-                "carthage-software/mago": "^1.47",
+                "carthage-software/mago": "^1.47.4",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6825,20 +6855,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-24T13:21:34+00:00"
+            "time": "2026-08-27T14:19:38+00:00"
         },
         {
             "name": "tecnickcom/tc-lib-color",
-            "version": "2.13.5",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-color.git",
-                "reference": "389eaad39e91520b3b2aeb40fad7f8c6e1d80fed"
+                "reference": "e6b9f583cf4c5126de158b8e0d99f61ffa7917ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/389eaad39e91520b3b2aeb40fad7f8c6e1d80fed",
-                "reference": "389eaad39e91520b3b2aeb40fad7f8c6e1d80fed",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/e6b9f583cf4c5126de158b8e0d99f61ffa7917ad",
+                "reference": "e6b9f583cf4c5126de158b8e0d99f61ffa7917ad",
                 "shasum": ""
             },
             "require": {
@@ -6846,7 +6876,7 @@
                 "php": "^8.2"
             },
             "require-dev": {
-                "carthage-software/mago": "^1.47",
+                "carthage-software/mago": "^1.47.4",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6870,16 +6900,24 @@
             "description": "PHP library to manipulate various color representations",
             "homepage": "https://tcpdf.org",
             "keywords": [
+                "cielab",
                 "cmyk",
                 "color",
                 "colors",
                 "colour",
                 "colours",
+                "css",
+                "gray",
+                "grayscale",
                 "hsl",
                 "hsla",
                 "javascript",
+                "lab",
+                "pdf",
                 "rgb",
                 "rgba",
+                "separation",
+                "spot",
                 "tc-lib-color",
                 "web"
             ],
@@ -6893,7 +6931,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-24T12:53:27+00:00"
+            "time": "2026-08-26T19:01:04+00:00"
         },
         {
             "name": "twig/twig",
