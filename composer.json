@@ -15,12 +15,6 @@
             "App\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/delaf/dev/libredte-lib-core"
-        }
-    ],
     "require": {
         "php": "^8.5",
         "derafu/http": "dev-main",
