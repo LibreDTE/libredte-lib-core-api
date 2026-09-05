@@ -2130,12 +2130,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreDTE/libredte-lib-core.git",
-                "reference": "77be877f4ef775113bf8493e6f1adca91e68e0fc"
+                "reference": "bd6234aafbdc52ecf9d705ee07af883e042de646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/77be877f4ef775113bf8493e6f1adca91e68e0fc",
-                "reference": "77be877f4ef775113bf8493e6f1adca91e68e0fc",
+                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/bd6234aafbdc52ecf9d705ee07af883e042de646",
+                "reference": "bd6234aafbdc52ecf9d705ee07af883e042de646",
                 "shasum": ""
             },
             "require": {
@@ -2207,7 +2207,7 @@
                 "issues": "https://github.com/libredte/libredte-lib-core/issues",
                 "source": "https://github.com/libredte/libredte-lib-core"
             },
-            "time": "2026-09-05T04:38:29+00:00"
+            "time": "2026-09-05T21:31:59+00:00"
         },
         {
             "name": "libredte/libredte-lib-core-dispatcher",
@@ -6729,16 +6729,16 @@
         },
         {
             "name": "tecnickcom/tc-lib-barcode",
-            "version": "2.16.0",
+            "version": "2.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-barcode.git",
-                "reference": "a586d5f03eecf0006395cb18fc92a96d46194ba8"
+                "reference": "06446612a4e47fb6f75f88aee6775090edabd587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/a586d5f03eecf0006395cb18fc92a96d46194ba8",
-                "reference": "a586d5f03eecf0006395cb18fc92a96d46194ba8",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-barcode/zipball/06446612a4e47fb6f75f88aee6775090edabd587",
+                "reference": "06446612a4e47fb6f75f88aee6775090edabd587",
                 "shasum": ""
             },
             "require": {
@@ -6749,7 +6749,7 @@
                 "tecnickcom/tc-lib-color": "^3.0"
             },
             "require-dev": {
-                "carthage-software/mago": "^1.47.4",
+                "carthage-software/mago": "1.47.6",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6860,20 +6860,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-02T13:37:03+00:00"
+            "time": "2026-09-05T07:35:04+00:00"
         },
         {
             "name": "tecnickcom/tc-lib-color",
-            "version": "3.0.2",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/tc-lib-color.git",
-                "reference": "e6b9f583cf4c5126de158b8e0d99f61ffa7917ad"
+                "reference": "c788cb2a7ae6abf5ca5f9246c2bad79bf990c861"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/e6b9f583cf4c5126de158b8e0d99f61ffa7917ad",
-                "reference": "e6b9f583cf4c5126de158b8e0d99f61ffa7917ad",
+                "url": "https://api.github.com/repos/tecnickcom/tc-lib-color/zipball/c788cb2a7ae6abf5ca5f9246c2bad79bf990c861",
+                "reference": "c788cb2a7ae6abf5ca5f9246c2bad79bf990c861",
                 "shasum": ""
             },
             "require": {
@@ -6881,7 +6881,7 @@
                 "php": "^8.2"
             },
             "require-dev": {
-                "carthage-software/mago": "^1.47.4",
+                "carthage-software/mago": "1.47.6",
                 "pdepend/pdepend": "^2.16",
                 "phpunit/phpunit": "^11.5 || ^12.5 || ^13.3"
             },
@@ -6936,7 +6936,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-26T19:01:04+00:00"
+            "time": "2026-09-05T07:27:11+00:00"
         },
         {
             "name": "twig/twig",
