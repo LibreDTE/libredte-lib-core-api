@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon-doctrine-types.git",
-                "reference": "18ba5ddfec8976260ead6e866180bd5d2f71aa1d"
+                "reference": "5fa5eacafd9ef47c8c6ab9143fc901ba0194d3dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/18ba5ddfec8976260ead6e866180bd5d2f71aa1d",
-                "reference": "18ba5ddfec8976260ead6e866180bd5d2f71aa1d",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/5fa5eacafd9ef47c8c6ab9143fc901ba0194d3dc",
+                "reference": "5fa5eacafd9ef47c8c6ab9143fc901ba0194d3dc",
                 "shasum": ""
             },
             "require": {
@@ -32,6 +32,11 @@
                 "phpunit/phpunit": "^10.3"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Carbon\\Doctrine\\": "src/Carbon/Doctrine/"
@@ -57,7 +62,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPHP/carbon-doctrine-types/issues",
-                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/3.2.0"
+                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/3.2.1"
             },
             "funding": [
                 {
@@ -73,7 +78,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-09T16:56:22+00:00"
+            "time": "2026-09-06T14:11:38+00:00"
         },
         {
             "name": "derafu/backbone",
@@ -187,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/backbone-dispatcher.git",
-                "reference": "aecb8312ef766103f6f54a4ad734a8630800488d"
+                "reference": "7441ab0bb040d4e6306c7cd6ad32cda4cbf5a8f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/aecb8312ef766103f6f54a4ad734a8630800488d",
-                "reference": "aecb8312ef766103f6f54a4ad734a8630800488d",
+                "url": "https://api.github.com/repos/derafu/backbone-dispatcher/zipball/7441ab0bb040d4e6306c7cd6ad32cda4cbf5a8f6",
+                "reference": "7441ab0bb040d4e6306c7cd6ad32cda4cbf5a8f6",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +240,7 @@
                 "issues": "https://github.com/derafu/backbone-dispatcher/issues",
                 "source": "https://github.com/derafu/backbone-dispatcher"
             },
-            "time": "2026-09-05T03:25:52+00:00"
+            "time": "2026-09-07T01:24:44+00:00"
         },
         {
             "name": "derafu/cache",
@@ -498,12 +503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/http.git",
-                "reference": "51e36d4b093580afd0ef02dbdf9e71891c5224a7"
+                "reference": "5463d10fac89a2160caf6d4dd056ffcb475de7ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/http/zipball/51e36d4b093580afd0ef02dbdf9e71891c5224a7",
-                "reference": "51e36d4b093580afd0ef02dbdf9e71891c5224a7",
+                "url": "https://api.github.com/repos/derafu/http/zipball/5463d10fac89a2160caf6d4dd056ffcb475de7ba",
+                "reference": "5463d10fac89a2160caf6d4dd056ffcb475de7ba",
                 "shasum": ""
             },
             "require": {
@@ -515,16 +520,17 @@
                 "mezzio/mezzio-flash": "^1.10",
                 "mezzio/mezzio-session": "^1.17",
                 "nyholm/psr7": "^1.8",
+                "php": "^8.5",
                 "php-di/invoker": "^2.3",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
                 "ext-xdebug": "*",
-                "friendsofphp/php-cs-fixer": "^3.94",
-                "phpstan/phpstan": "^1.12",
-                "phpunit/phpunit": "^11.5",
-                "symfony/rate-limiter": "^8.0"
+                "friendsofphp/php-cs-fixer": "^3.95",
+                "phpstan/phpstan": "^2.2",
+                "phpunit/phpunit": "^13.3",
+                "symfony/rate-limiter": "^8.1"
             },
             "suggest": {
                 "symfony/rate-limiter": "For rate limiting middleware."
@@ -552,7 +558,7 @@
                 "issues": "https://github.com/derafu/http/issues",
                 "source": "https://github.com/derafu/http"
             },
-            "time": "2026-04-14T22:32:10+00:00"
+            "time": "2026-09-06T18:07:46+00:00"
         },
         {
             "name": "derafu/kernel",
@@ -815,12 +821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/derafu/repository.git",
-                "reference": "782e9443b7417ce8c8bb2afc00894f010592c004"
+                "reference": "e7414317700d054f16648b24ff04fbb99f55eb43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derafu/repository/zipball/782e9443b7417ce8c8bb2afc00894f010592c004",
-                "reference": "782e9443b7417ce8c8bb2afc00894f010592c004",
+                "url": "https://api.github.com/repos/derafu/repository/zipball/e7414317700d054f16648b24ff04fbb99f55eb43",
+                "reference": "e7414317700d054f16648b24ff04fbb99f55eb43",
                 "shasum": ""
             },
             "require": {
@@ -853,13 +859,13 @@
                     "homepage": "https://www.derafu.dev"
                 }
             ],
-            "description": "Derafu: Repository - Lightweight File Data Source Management for PHP",
+            "description": "Derafu: Repository - Lightweight Data Source Management for PHP",
             "homepage": "https://www.derafu.dev/docs/data/repository",
             "support": {
                 "issues": "https://github.com/derafu/repository/issues",
                 "source": "https://github.com/derafu/repository"
             },
-            "time": "2026-09-04T23:33:59+00:00"
+            "time": "2026-09-07T00:52:48+00:00"
         },
         {
             "name": "derafu/routing",
@@ -2130,12 +2136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreDTE/libredte-lib-core.git",
-                "reference": "bd6234aafbdc52ecf9d705ee07af883e042de646"
+                "reference": "c5e2a8f623ec678b43a75580c3e44d03b351a87b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/bd6234aafbdc52ecf9d705ee07af883e042de646",
-                "reference": "bd6234aafbdc52ecf9d705ee07af883e042de646",
+                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/c5e2a8f623ec678b43a75580c3e44d03b351a87b",
+                "reference": "c5e2a8f623ec678b43a75580c3e44d03b351a87b",
                 "shasum": ""
             },
             "require": {
@@ -2207,7 +2213,7 @@
                 "issues": "https://github.com/libredte/libredte-lib-core/issues",
                 "source": "https://github.com/libredte/libredte-lib-core"
             },
-            "time": "2026-09-05T21:31:59+00:00"
+            "time": "2026-09-06T21:30:06+00:00"
         },
         {
             "name": "libredte/libredte-lib-core-dispatcher",
