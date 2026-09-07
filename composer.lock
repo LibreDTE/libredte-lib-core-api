@@ -2136,12 +2136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreDTE/libredte-lib-core.git",
-                "reference": "c5e2a8f623ec678b43a75580c3e44d03b351a87b"
+                "reference": "f44ddbf9dcf0e4dd0bb9aaca2efd4acf23094e23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/c5e2a8f623ec678b43a75580c3e44d03b351a87b",
-                "reference": "c5e2a8f623ec678b43a75580c3e44d03b351a87b",
+                "url": "https://api.github.com/repos/LibreDTE/libredte-lib-core/zipball/f44ddbf9dcf0e4dd0bb9aaca2efd4acf23094e23",
+                "reference": "f44ddbf9dcf0e4dd0bb9aaca2efd4acf23094e23",
                 "shasum": ""
             },
             "require": {
@@ -2213,7 +2213,7 @@
                 "issues": "https://github.com/libredte/libredte-lib-core/issues",
                 "source": "https://github.com/libredte/libredte-lib-core"
             },
-            "time": "2026-09-06T21:30:06+00:00"
+            "time": "2026-09-07T03:34:24+00:00"
         },
         {
             "name": "libredte/libredte-lib-core-dispatcher",
