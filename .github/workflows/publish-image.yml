@@ -2,6 +2,10 @@ name: Publish Docker Image
 
 on:
   workflow_dispatch:
+  # Reconstrucción semanal: recoge los parches de seguridad de la imagen base
+  # (PHP, FrankenPHP, Caddy) aunque no haya cambios en el repositorio.
+  schedule:
+    - cron: '17 4 * * 1'
   push:
     branches:
       - main
@@ -56,6 +60,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
+          pull: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
