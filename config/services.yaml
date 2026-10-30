@@ -1,8 +1,13 @@
 imports:
-  - { resource: '../vendor/libredte/libredte-lib-core-dispatcher/config/services.yaml' }
+    - { resource: '../vendor/derafu/http/resources/config/http-static-files-services.yaml' }
+    - { resource: '../vendor/derafu/backbone-api/resources/config/backbone-api-services.yaml' }
+    # Keep LibreDTE's dispatcher parameters and public entry points last.
+    - { resource: '../vendor/libredte/libredte-lib-core-dispatcher/resources/config/libredte-dispatcher-services.yaml' }
 
 parameters:
-    libredte.lib.core.project_dir: '%kernel.project_dir%/vendor/libredte/libredte-lib-core'
+    derafu.backbone_api.url: '%env.APP_URL%/api'
+    derafu.routing.routes: '%routes%'
+    derafu.http.static_files.directory: '%kernel.project_dir%/public/static'
 
 services:
     _defaults:
@@ -14,67 +19,7 @@ services:
         resource: '../src/Controller/'
         public: true
 
-    Psr\Http\Server\RequestHandlerInterface:
-        class: Derafu\Http\Service\RequestHandler
-        public: true
-        arguments:
-            $middlewares:
-                - '@Derafu\Http\Middleware\StaticFilesMiddleware'
-                - '@Derafu\Http\Middleware\RequestFactoryMiddleware'
-                - '@Derafu\Http\Middleware\RouterMiddleware'
-                - '@Derafu\Http\Middleware\DispatcherMiddleware'
-                - '@Derafu\Http\Middleware\ResponseNormalizerMiddleware'
-
-    Derafu\Http\Middleware\StaticFilesMiddleware:
-        arguments:
-            $directory: '%kernel.project_dir%/public/static'
-    Derafu\Http\Middleware\RequestFactoryMiddleware: ~
-    Derafu\Http\Middleware\RouterMiddleware: ~
-    Derafu\Http\Middleware\DispatcherMiddleware: ~
-    Derafu\Http\Middleware\ResponseNormalizerMiddleware: ~
-
-    Derafu\Http\Contract\RequestFactoryInterface:
-        class: Derafu\Http\Factory\RequestFactory
-
-    Derafu\Routing\Contract\RouterInterface:
-        class: Derafu\Routing\Router
-        arguments:
-            $parsers:
-                - '@Derafu\Routing\Parser\StaticParser'
-                - '@Derafu\Routing\Parser\DynamicParser'
-            $routes: '%routes%'
-
-    Derafu\Routing\Parser\StaticParser: ~
-    Derafu\Routing\Parser\DynamicParser: ~
-
-    Derafu\Http\Contract\DispatcherInterface:
-        class: Derafu\Http\Service\Dispatcher
-
-    Derafu\Http\Contract\ProblemHandlerInterface:
-        class: Derafu\Http\Service\ProblemHandler
-        lazy: true
-
-    Derafu\Http\Contract\ProblemFactoryInterface:
-        class: Derafu\Http\Factory\ProblemFactory
-        lazy: true
-
-    Derafu\Http\Contract\SafeThrowableFactoryInterface:
-        class: Derafu\Http\Factory\SafeThrowableFactory
-        lazy: true
-
-    # Backbone API (HTTP transport with autodiscovery).
-    Derafu\BackboneApi\Contract\DispatcherInterface:
-        class: Derafu\BackboneApi\Service\Dispatcher
-    Derafu\BackboneApi\Contract\RouterInterface:
-        class: Derafu\BackboneApi\Service\Router
-    Derafu\BackboneApi\Service\Explorer: ~
-    Derafu\BackboneApi\Service\Documenter: ~
-    Derafu\BackboneApi\Service\HttpStatusResolver: ~
-
-    # AbstractController (App\Controller\ApiController) needs a real PSR-17
-    # response factory to answer a failed operation with the resolved HTTP
-    # status instead of the default 200 — nyholm/psr7 is already pulled in
-    # transitively (derafu/http's own tests use it), reused here as the
-    # real runtime implementation too.
+    # The application supplies the PSR-17 factory used for API responses.
+    # nyholm/psr7 is a direct runtime dependency of this project.
     Psr\Http\Message\ResponseFactoryInterface:
         class: Nyholm\Psr7\Factory\Psr17Factory
